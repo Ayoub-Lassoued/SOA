@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  #active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ayoub-Lassoued/config-repos.git
+          default-label: main
+          clone-on-start: true
+        #search-locations: file:///C:/Users/ayoub lassoued/Desktop/DSI33_2027/SOA/ayoub_spring_cloud/cofig-repos
+      #     search-locations: "classpath:/config"
+server:
+  port: 9999
